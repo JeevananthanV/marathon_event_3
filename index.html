@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marathon Edition 3 | WhatsApp Bot & Smart Runner Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace']
+          },
+          colors: {
+            brand: {
+              400: '#38bdf8',
+              500: '#0284c7',
+              600: '#0369a1',
+              accent: '#f97316'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Outfit', sans-serif; background-color: #07090e; color: #f8fafc; }
+    .glass-panel { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .neon-glow { text-shadow: 0 0 20px rgba(56, 189, 248, 0.5); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-sky-500/30 selection:text-sky-200">
+  <!-- Header -->
+  <header class="border-b border-white/5 bg-slate-950/80 sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center font-bold text-black font-mono text-xl shadow-lg shadow-sky-500/20">
+          M3
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-white block">MARATHON <span class="text-sky-400">EDITION 3</span></span>
+          <span class="text-[10px] tracking-widest text-slate-400 uppercase font-mono">Automated WhatsApp Bot Registration</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <a href="#categories" class="hover:text-sky-400 transition-colors">Categories</a>
+        <a href="#whatsapp" class="hover:text-sky-400 transition-colors">WhatsApp Registration</a>
+        <a href="#bib" class="hover:text-sky-400 transition-colors">Instant BIB Pass</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/JeevananthanV/marathon_event_3" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-semibold rounded-lg border border-white/10 text-slate-300 hover:bg-white/5 transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="flex-1">
+    <section class="relative pt-16 pb-24 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-sky-900/20 via-transparent to-transparent pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs font-semibold mb-6">
+            <span>⚡</span> Automated Real-Time Runner Check-in System
+          </div>
+          <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight mb-6">
+            Push Every Limit. <br><span class="text-sky-400 neon-glow">Register via WhatsApp.</span>
+          </h1>
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed mb-8">
+            Experience next-generation race onboarding with our automated conversational bot. Simply send a message, select your race category, and receive your digital BIB pass instantly.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="#whatsapp" class="px-6 py-3.5 rounded-xl font-semibold text-sm text-black bg-gradient-to-r from-emerald-400 to-green-500 shadow-lg shadow-emerald-500/25 hover:opacity-95 transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.394 0 0 5.393 0 12.031c0 2.12.553 4.186 1.604 6.012L0 24.062l6.205-1.583a12.008 12.008 0 005.826 1.503h.005c6.636 0 12.03-5.394 12.03-12.032C24.066 5.393 18.672 0 12.031 0zm0 22.043h-.004a9.99 9.99 0 01-5.093-1.39l-.365-.216-3.784.966.993-3.69-.238-.378a9.98 9.98 0 01-1.536-5.304c0-5.524 4.495-10.018 10.027-10.018 2.677 0 5.195 1.043 7.088 2.937a9.97 9.97 0 012.934 7.085c0 5.525-4.495 10.018-10.025 10.018zm5.495-7.5c-.301-.15-1.782-.879-2.058-.98-.276-.1-.476-.15-.677.15-.2.301-.776.98-.952 1.18-.176.2-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.895-.798-1.5-1.785-1.676-2.086-.176-.301-.019-.464.132-.614.135-.135.301-.351.451-.527.15-.176.201-.301.301-.501.101-.2.05-.376-.025-.526-.075-.15-.677-1.63-.927-2.233-.244-.587-.492-.507-.677-.517l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508s1.078 2.909 1.229 3.11c.15.2 2.122 3.24 5.141 4.544.718.31 1.279.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.782-.728 2.033-1.431.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351z"/></svg>
+              Start WhatsApp Registration
+            </a>
+            <a href="#bib" class="px-6 py-3.5 rounded-xl font-semibold text-sm text-slate-200 glass-panel hover:bg-white/5 transition-all">
+              Preview Digital BIB Pass
+            </a>
+          </div>
+        </div>
+
+        <!-- Race Categories Grid -->
+        <div id="categories" class="mt-20">
+          <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold tracking-tight text-white">Select Your Challenge</h2>
+            <p class="text-xs text-slate-400 mt-1">Certified timing chip courses with elevation profiles</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-sky-500/40 transition-all">
+              <span class="text-xs font-mono text-sky-400 font-semibold uppercase">Fun Run</span>
+              <h3 class="text-3xl font-black text-white mt-1 mb-2">5K Run</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">Perfect for beginners and families looking for a fitness celebration.</p>
+              <div class="text-xs font-mono text-slate-300">Cut-off: 60 mins • ₹499</div>
+            </div>
+            <div class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-sky-500/40 transition-all">
+              <span class="text-xs font-mono text-emerald-400 font-semibold uppercase">Timed Challenge</span>
+              <h3 class="text-3xl font-black text-white mt-1 mb-2">10K Express</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">Fast-paced race with automated split checkpoints at every 2.5K.</p>
+              <div class="text-xs font-mono text-slate-300">Cut-off: 100 mins • ₹799</div>
+            </div>
+            <div class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-orange-500/40 transition-all">
+              <span class="text-xs font-mono text-orange-400 font-semibold uppercase">Semi-Pro</span>
+              <h3 class="text-3xl font-black text-white mt-1 mb-2">21.1K Half</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">Endurance course covering scenic river routes and downtown bypass.</p>
+              <div class="text-xs font-mono text-slate-300">Cut-off: 3.5 hrs • ₹1,199</div>
+            </div>
+            <div class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-purple-500/40 transition-all">
+              <span class="text-xs font-mono text-purple-400 font-semibold uppercase">Full Legend</span>
+              <h3 class="text-3xl font-black text-white mt-1 mb-2">42.2K Full</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">The ultimate test with dedicated pacer buses and electrolyte stations.</p>
+              <div class="text-xs font-mono text-slate-300">Cut-off: 6.0 hrs • ₹1,699</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Bot Integration Card -->
+        <div id="whatsapp" class="mt-20 glass-panel p-8 sm:p-12 rounded-3xl border border-emerald-500/30">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 mb-4">
+                Bot Operational 24/7
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+                Chat With Our WhatsApp Concierge
+              </h2>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                No lengthy paper forms or complicated logins. Just text <strong class="text-emerald-400 font-mono">"RUN"</strong> to our verified WhatsApp business number to register, submit medical waivers, choose t-shirt sizes, and download your entry ticket.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3 text-sm text-slate-300">
+                  <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">1</span>
+                  <span>Say "Hi" or "Register" on WhatsApp</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-300">
+                  <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">2</span>
+                  <span>Select race category (5K, 10K, 21K, 42K)</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-300">
+                  <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">3</span>
+                  <span>Instant UPI payment confirmation & BIB generation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- BIB Simulator -->
+            <div id="bib" class="bg-gradient-to-br from-slate-900 to-black p-6 rounded-2xl border border-white/10 shadow-2xl relative">
+              <div class="border-4 border-dashed border-sky-400/30 p-6 rounded-xl text-center">
+                <div class="flex justify-between items-center text-xs font-mono text-slate-400 mb-4">
+                  <span>MARATHON EDITION 3</span>
+                  <span class="text-emerald-400 font-bold">VERIFIED RUNNER</span>
+                </div>
+                <div class="text-6xl font-black font-mono tracking-widest text-sky-400 my-4">
+                  #7704
+                </div>
+                <div class="text-lg font-bold text-white uppercase tracking-wider">
+                  JEEVANANTHAN V
+                </div>
+                <div class="text-xs text-slate-400 font-mono mt-1">
+                  CATEGORY: 21.1K HALF MARATHON • WAVE: A1
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/10 flex justify-between items-center text-[10px] text-slate-500 font-mono">
+                  <span>TIMING CHIP: RFID-99201</span>
+                  <span>VENUE: SALEM METRO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 bg-slate-950 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+      <div>
+        Engineered by <a href="https://github.com/JeevananthanV" class="text-sky-400 hover:underline">Jeevananthan V</a> • Production Ready Microservice Architecture
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://jeevananthanv-portfolio.netlify.app" class="hover:text-sky-300">Master Portfolio</a>
+        <span>•</span>
+        <a href="https://github.com/JeevananthanV/marathon_event_3" class="hover:text-sky-300">GitHub Repository</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
