@@ -77,3 +77,4 @@ cd "marathon frontend"
 npm run build
 ```
 The compiled server output is emitted in `.output/server/` and ready for Nitro/Vercel edge deployment.
+
